@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/media.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Purpleschool</title>
+	<link rel="icon" type="schoolico.ico" href="img/schoolico.ico">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+	<script>
+		function toggleMenu() {
+			var menu = document.getElementById('menu');
+			var headerNav = document.querySelector('.headernav');
+			var burgerLines = document.querySelectorAll('.burger-line');
+		
+			menu.classList.toggle('collapsed');
+			headerNav.classList.toggle('collapsed');
+		
+			burgerLines.forEach(function(line) {
+				line.classList.toggle('collapsed');
+			});
+		
+			// Добавляем задержку перед изменением display
+			setTimeout(function() {
+				if (menu.classList.contains('collapsed')) {
+					menu.style.display = 'none';
+				} else {
+					menu.style.display = 'block';
+				}
+			}, 300); // Задержка в 300 миллисекунд (значение должно быть равно времени анимации в CSS)
+		}
+		</script>
+</head>
+<body>
+	<header class="header">
+		<div class="container">
+			<div class="headermenu">
+				<div class="headerlogo">
+					<img src="img/logo.svg" alt="logo">
+				</div>
+				<div class="headernav collapsed">
+					<div class="burger-menu" onclick="toggleMenu()">
+						<div class="burger-line"></div>
+						<div class="burger-line"></div>
+						<div class="burger-line"></div>
+					</div>
+					<ul id="menu"  >
+						<li><a href="#">Курсы</a></li>
+						<li><a href="#">О школе</a></li>
+						<li><a href="#">Блог</a></li>
+						<li><a href="#">База знаний</a></li>
+					</ul>
+				</div>
+				<div class="headbutton">
+					<span>Вход</span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xl-6 col-md-12 col-sm-12">
+					<div class="container">
+						<div class="headercontent">
+							<h1><span>Доступные курсы по</span> <span>Разработке и DevOps</span></h1>
+							<div class="buttonsh">
+								<button class="btn1">Выбрать курс</button>
+								<button class="btn2">О школе</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-6 col-md-12 col-sm-12">
+					<div class="imgccontainer">
+					<img src="img/video.svg" class="imgv">
+					<button class="playbutton">О школе</button>
+				</div>
+				</div>
+			</div>
+	</header>
+	<main>
+	 <div class="container">
+		<div class="mainheader">
+		<h6>Выбрать курс</h6>
+		<h1>Каталог курсов</h1>
+	</div>
+	</div>
+	<div class="container">
+	<div class="mainmenu">
+		<ul>
+			<li>Все</li>
+			<li>FrontEnd</li>
+			<li>DevOPS</li>
+			<li>Backend</li>
+			<li>Soft skills</li>
+		</ul>
+	</div>
+	</div>
+		<article class="cards">
+			<div class="row">
+				<div class="col-xl-4 col-md-6 col-xs-12 col-sm-12">
+					<div class="container">
+					<div class="card" style="width: 21rem;">
+						<img src="img/Обложка 4.svg" class="card-img-top" alt="картинка курса">
+						<div class="card-body">
+							<h5 class="card-title">React + Next.js - с нуля</h5>
+							<p class="card-text">Антон Ларичев</p>
+							<p class="card-text2">18 часов лекций</p>
+							<div class="card-text3">
+								<span>4.9</span>
+								<span>Frontend</span>
+							</div>
+							<div class="buttonscard">
+								<span>от 1 890 ₽</span>
+							<button href="#" class="btn1">Подробнее</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+				<div class="col-xl-4 col-md-6 col-xs-12 col-sm-12">
+					<div class="container">
+					<div class="card" style="width: 21rem;">
+						<img src="img/Обложка 4.svg" class="card-img-top" alt="картинка курса">
+						<div class="card-body">
+							<h5 class="card-title">React + Next.js - с нуля</h5>
+							<p class="card-text">Антон Ларичев</p>
+							<p class="card-text2">18 часов лекций</p>
+							<div class="card-text3">
+								<span>4.9</span>
+								<span>Frontend</span>
+							</div>
+							<div class="buttonscard">
+								<span>от 1 890 ₽</span>
+							<button href="#" class="btn1">Подробнее</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+				<div class="col-xl-4 col-md-6 col-xs-12 col-sm-12">
+					<div class="container">
+					<div class="card" style="width: 21rem;">
+						<img src="img/Обложка 4.svg" class="card-img-top" alt="картинка курса">
+						<div class="card-body">
+							<h5 class="card-title">React + Next.js - с нуля</h5>
+							<p class="card-text">Антон Ларичев</p>
+							<p class="card-text2">18 часов лекций</p>
+							<div class="card-text3">
+								<span>4.9</span>
+								<span>Frontend</span>
+							</div>
+							<div class="buttonscard">
+								<span>от 1 890 ₽</span>
+							<button href="#" class="btn1">Подробнее</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+				<div class="col-xl-4 col-md-6 col-xs-12 col-sm-12">
+					<div class="container">
+					<div class="card" style="width: 21rem;">
+						<img src="img/Обложка 4.svg" class="card-img-top" alt="картинка курса">
+						<div class="card-body">
+							<h5 class="card-title">React + Next.js - с нуля</h5>
+							<p class="card-text">Антон Ларичев</p>
+							<p class="card-text2">18 часов лекций</p>
+							<div class="card-text3">
+								<span>4.9</span>
+								<span>Frontend</span>
+							</div>
+							<div class="buttonscard">
+								<span>от 1 890 ₽</span>
+							<button href="#" class="btn1">Подробнее</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+				<div class="col-xl-4 col-md-6 col-xs-12 col-sm-12">
+					<div class="container">
+					<div class="card" style="width: 21rem;">
+						<img src="img/Обложка 4.svg" class="card-img-top" alt="картинка курса">
+						<div class="card-body">
+							<h5 class="card-title">React + Next.js - с нуля</h5>
+							<p class="card-text">Антон Ларичев</p>
+							<p class="card-text2">18 часов лекций</p>
+							<div class="card-text3">
+								<span>4.9</span>
+								<span>Frontend</span>
+							</div>
+							<div class="buttonscard">
+								<span>от 1 890 ₽</span>
+							<button href="#" class="btn1">Подробнее</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+			</div>
+		</article>
+	</main>
+	<article class="why">
+		<div class="container">
+		<h6>О школе</h6>
+		<h1>Нам доверяют</h1>
+		<p>Основатель школы и автор Антон Ларичев занимается разработкой уже более 13 лет и прошёл путь от разработчика до CTO. В курсах даются актуальные материалы без воды с опытом реальных проектов и практическим закреплением материала.</p>
+		</div>
+		<div class="container">
+			<div class="stat-wrapper">
+					<div class="stat">
+							<h1>15 000</h1>
+							<p>учеников во всем мире</p>
+					</div>
+	
+					<div class="stat">
+							<h1>30 дней</h1>
+							<p>гарантия возврата денег</p>
+					</div>
+	
+					<div class="stat">
+							<h1>90%</h1>
+							<p>студентов рекомендуют курсы</p>
+					</div>
+			</div>
+	
+			<h1>Рейтинги на независимых платформах</h1>
+		</div>
+		<div class="container">
+			<div class="stat-wrapper">
+				<div class="stat2">
+					<span>4.8</span>
+					<div class="rating">
+					<img src="img/КурсесТоп.svg">
+					<div class="stars">
+					<img src="img/Star2.svg">
+					<img src="img/Star2.svg">
+					<img src="img/Star2.svg">
+					<img src="img/Star2.svg">
+					<img src="img/Star2.svg">
+					</div>
+					</div>
+					</div>
+					<div class="stat2">
+						<span>4.8</span>
+						<div class="rating">
+						<img src="img/stepik.svg">
+						<div class="stars">
+						<img src="img/Star2.svg">
+						<img src="img/Star2.svg">
+						<img src="img/Star2.svg">
+						<img src="img/Star2.svg">
+						<img src="img/Star2.svg">
+						</div>
+						</div>
+						</div>
+						<div class="stat2">
+							<span>4.7</span>
+							<div class="rating">
+							<img src="img/Udemy.svg">
+							<div class="stars">
+							<img src="img/Star2.svg">
+							<img src="img/Star2.svg">
+							<img src="img/Star2.svg">
+							<img src="img/Star2.svg">
+							<img src="img/Star2.svg">
+							</div>
+							</div>
+							</div>
+						</div>
+					</div>
+	</article>
+	<article class="contacts">
+		<div class="container">
+		<h6>Блог и социальные сети</h6>
+		<h1>Полезные материалы</h1>
+		<p class="commentt">Каждую неделю мы публикуем новости, обновления, а так же дополнительные полезные материалы в социальных сетях:</p>
+		<div class="links">
+			<img src="img/telegram.svg">
+			<img src="img/youtube.svg">
+			<img src="img/vk.svg">
+		</div>
+		<div class="comment">
+		 <div class="left">
+       <span class="span1">06 мая 2023</span>
+			 <span class="span2">2 584 просмотра</span>
+			 <div class="txt">
+				<h1>Критика в работе – ваш друг, но не всегда</h1>
+				<p>Когда делаешь код ревью иногда встречаешь с тем, что даешь конструктивную критику
+					 и она воспринимается в штыки, словно это личное оскорбление. Человек всеми силами пытает
+					 ся сопротивляться обратной связи и не готов слушать аргументы. Тут варианта два: или обра
+					 тная связь дана некорректно, или человек не воспринимает критику. В этом посте я хочу сосре
+					 доточиться на том, как работать с критикой.</p>
+					 <button class="button-telephone">Читать</button>
+			 </div>
+		 </div>
+		 <button class="button-dekstop">Читать</button>
+		</div>
+		<div class="comment">
+			<div class="left">
+				<span class="span1">06 мая 2023</span>
+				<span class="span2">2 584 просмотра</span>
+				<div class="txt">
+				 <h1>Критика в работе – ваш друг, но не всегда</h1>
+				 <p>Когда делаешь код ревью иногда встречаешь с тем, что даешь конструктивную критику
+						и она воспринимается в штыки, словно это личное оскорбление. Человек всеми силами пытает
+						ся сопротивляться обратной связи и не готов слушать аргументы. Тут варианта два: или обра
+						тная связь дана некорректно, или человек не воспринимает критику. В этом посте я хочу сосре
+						доточиться на том, как работать с критикой.</p>
+						<button class="button-telephone">Читать</button>
+				</div>
+			</div>
+			<button class="button-dekstop">Читать</button>
+		 </div>
+		 <div class="comment">
+			<div class="left">
+				<span class="span1">06 мая 2023</span>
+				<span class="span2">2 584 просмотра</span>
+				<div class="txt">
+				 <h1>Критика в работе – ваш друг, но не всегда</h1>
+				 <p>Когда делаешь код ревью иногда встречаешь с тем, что даешь конструктивную критику
+						и она воспринимается в штыки, словно это личное оскорбление. Человек всеми силами пытает
+						ся сопротивляться обратной связи и не готов слушать аргументы. Тут варианта два: или обра
+						тная связь дана некорректно, или человек не воспринимает критику. В этом посте я хочу сосре
+						доточиться на том, как работать с критикой.</p>
+						<button class="button-telephone">Читать</button>
+				</div>
+			</div>
+			<button class="button-dekstop" href="#">Читать</button> 
+		 </div>
+		</div>
+	</article>
+	<footer>
+		<div class="container">
+			<div class="footerheader">
+				<img src="img/logo.svg" alt="PurpleShool">
+				<div class="links">
+					<img src="img/telegram.svg">
+					<img src="img/youtube.svg">
+					<img src="img/vk.svg">
+				</div>
+			</div>
+			<div class="spisks">
+				<div class="spisk">
+				<ul>
+        <h3>Меню</h3>
+				<li>Курсы</li>
+				<li>О школе</li>
+				<li>Блог</li>
+				<li>База знаний</li>
+				</ul>
+				</div>
+				<div class="spisk">
+					<ul>
+					<h3>Документы</h3>
+					<li>Договор оферта</li>
+					<li>Договор о конфиденциальности</li>
+					</ul>
+					</div>
+					<div class="spisk">
+						<ul>
+						<h3>Реквизиты</h3>
+						<li><span>ИП Ларичев Антон Андреевич</span></li>
+						<li><span>ИНН 773373765379</span></li>
+						<li>contact@purpleschool.ru</li>
+						</ul>
+						</div>
+				</div>
+				<span class="copyright">PurpleSchool © 2020 - 2023 Все права защищены
+				</span>
+		</div>
+	</footer>
+</body>
+</html>
